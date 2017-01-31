@@ -1,6 +1,7 @@
 'use strict';
 require('./utils/rootRequire')();
 require('./utils/prodEnv')();
+require('./config/config.js')();
 let express = require('express');
 let http    = require('http');
 let Router  = rootRequire('app/Router');
@@ -28,5 +29,5 @@ app.use((req, res, next) => {
   });
 });
 
-server.listen(8080);
-console.log('Server started on localhost:8080\n');
+server.listen(global.config.port);
+console.log(`Server started on ${global.config.baseUrl}:${global.config.port}\n`);

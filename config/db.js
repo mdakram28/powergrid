@@ -1,8 +1,9 @@
 'use strict';
 
 let Sequelize = require('sequelize');
-let db = new Sequelize('test', 'root', '', {
-  dialect: 'mysql',
+let db = new Sequelize(global.config.database, global.config.username, global.config.password, {
+    dialect: 'postgresql',
+
 });
 
 db._Sequelize = Sequelize;
