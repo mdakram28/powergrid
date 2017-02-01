@@ -1,7 +1,7 @@
 {
-  "name": "express-boilerplate",
+  "name": "powergrid",
   "version": "1.0.0",
-  "description": "expressjs boilerplate",
+  "description": "power monitoring",
   "main": "server.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha",
@@ -27,11 +27,10 @@
     "compression": "^1.5.2",
     "express": "~4.9.0",
     "express-session": "^1.11.3",
-    "jade": "~1.6.0",
     "sequelize": "^3.9.0",
-    "method-override": "latest",
     "pg": "latest",
-    "pg-hstore": "latest"
+    "pg-hstore": "latest",
+    "ejs": "~2.5.5"
   },
   "homepage": "https://github.com/mdakram28/powergrid",
   "devDependencies": {
