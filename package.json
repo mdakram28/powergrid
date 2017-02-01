@@ -30,7 +30,8 @@
     "sequelize": "^3.9.0",
     "pg": "latest",
     "pg-hstore": "latest",
-    "ejs": "~2.5.5"
+    "ejs": "~2.5.5",
+    "dotenv": "~4.0.0"
   },
   "homepage": "https://github.com/mdakram28/powergrid",
   "devDependencies": {
