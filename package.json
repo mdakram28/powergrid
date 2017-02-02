@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha",
-    "start": "./node_modules/.bin/nodemon -w",
+    "start": "webpack --config webpack.config.js & nodemon -w",
     "db:tables:create": "node ./tasks/createTables.js",
 	"build": "webpack --config webpack.config.js"
   },
@@ -34,11 +34,13 @@
     "ejs": "~2.5.5",
     "dotenv": "~4.0.0",
 
-	"angular" : "latest"
+	"angular" : "latest",
+	"bootstrap" : ""
   },
   "homepage": "https://github.com/mdakram28/powergrid",
   "devDependencies": {
     "babel-loader": "latest",
+	"babel-core" : "latest",
     "babel-preset-es2015": "latest",
     "eslint": "^3.14.1",
     "eslint-config-google": "^0.7.1",
