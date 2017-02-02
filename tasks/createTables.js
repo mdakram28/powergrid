@@ -1,4 +1,5 @@
-'use strict';
+"use strict";
+
 require('../utils/rootRequire')();
 let Book = rootRequire('app/models/Book');
 

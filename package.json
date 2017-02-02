@@ -5,8 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha",
-    "start": "./node_modules/.bin/nodemon -w ./ --harmony_destructuring",
-    "db:tables:create": "node ./tasks/createTables.js"
+    "start": "./node_modules/.bin/nodemon -w",
+    "db:tables:create": "node ./tasks/createTables.js",
+	"build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -31,13 +32,21 @@
     "pg": "latest",
     "pg-hstore": "latest",
     "ejs": "~2.5.5",
-    "dotenv": "~4.0.0"
+    "dotenv": "~4.0.0",
+
+	"angular" : "latest"
   },
   "homepage": "https://github.com/mdakram28/powergrid",
   "devDependencies": {
+    "babel-loader": "latest",
+    "babel-preset-es2015": "latest",
+    "eslint": "^3.14.1",
+    "eslint-config-google": "^0.7.1",
     "mocha": "^2.3.3",
     "node-fetch": "^1.0.6",
     "nodemon": "^1.7.0",
-    "superagent": "^1.4.0"
+    "superagent": "^1.4.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "latest"
   }
 }

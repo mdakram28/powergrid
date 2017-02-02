@@ -2,10 +2,11 @@
 
 module.exports = function(){
     global.config = {
-        "baseUrl" : "localhost",
+        "baseUrl" : "http://localhost",
         "port" : 8080,
         "database" : "test",
         "username" : "postgre",
-        "password" : "admin"
+        "password" : "admin",
+        "sessionSecret" : "akram@3s^%hget"
     };
 };

@@ -27,12 +27,13 @@ module.exports = function(app, express) {
   **/
 
   app.use(session({
-    secret: 'sUperS3cr3t',
+    secret: global.config.sessionSecret,
     saveUninitialized: true,
     resave: true,
   }));
 
-  app.set('views', path.join(__dirname, '../app/views'));
+  // app.set('views', path.join(__dirname, '../app/views'));
   app.set('view engine', 'jade');
   app.use(express.static(path.join(__dirname, '../assets')));
+  app.use(express.static(path.join(__dirname, '../public')));
 };
