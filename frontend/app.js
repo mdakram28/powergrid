@@ -9,6 +9,7 @@ require('fastclick/lib/fastclick.js');
 
 require('./js/index.js')
 require('./js/ui-components/sidebar-menu.js');
+require('./js/modal.js');
 
 require('./js/custom.js');
 require('./css/custom.css');
