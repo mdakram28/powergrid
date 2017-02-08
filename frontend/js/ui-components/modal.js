@@ -1,4 +1,4 @@
-//Modal JS spell 
+//Modal JS spell
 $(document).ready(function(){
     $("#myModal").modal('show');
 });

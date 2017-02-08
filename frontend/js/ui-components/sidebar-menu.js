@@ -24,10 +24,10 @@ app.directive('menuItem', function() {
 		  	</ul>\
 			<ng-transclude></ng-transclude>\
 		</li>',
-        controller: ($scope) => {
+        controller: function($scope) {
             $scope.menuItems = [];
             $scope.isNested = false;
-            this.addSubItem = (href, label) => {
+            this.addSubItem = function(href, label) {
                 $scope.isNested = true;
                 console.log(href, label);
                 $scope.menuItems.push({
@@ -48,7 +48,7 @@ app.directive('menuSubitem', ()=>{
             'href': '@',
             'label': '@'
         },
-        link: (scope, elem, attr, menuItem) => {
+        link: function(scope, elem, attr, menuItem) {
             menuItem.addSubItem(scope.href, scope.label);
         }
     }
