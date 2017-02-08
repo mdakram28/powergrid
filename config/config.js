@@ -8,5 +8,9 @@ module.exports = function() {
         'username': 'postgre',
         'password': 'admin',
         'sessionSecret': 'akram@3s^%hget',
+		'jwtSecret': 'MyS3c1231%78NH',
+		'jwtSession': {
+			session: false
+		}
     };
 };

@@ -4,16 +4,16 @@ let bodyParser = require('body-parser');
 let path = require('path');
 let session = require('express-session');
 let compression = require('compression');
+let cookieParser = require('cookie-parser');
 
-module.exports = function(app, express) {
+module.exports = function(app, express, auth) {
     if (global.PROD_ENV) {
         app.use(compression());
     }
 
-    /*
-     * Parse JSON
-     * app.use(bodyParser.json());
-     **/
+	app.use(cookieParser());
+
+    app.use(bodyParser.json());
 
     app.use(bodyParser.urlencoded({
         extended: true,
@@ -29,6 +29,8 @@ module.exports = function(app, express) {
         saveUninitialized: true,
         resave: true,
     }));
+
+	app.use(auth.initialize());
 
     // app.set('views', path.join(__dirname, '../app/views'));
     app.set('view engine', 'jade');
