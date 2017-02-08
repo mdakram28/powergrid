@@ -8,5 +8,5 @@ require('nprogress/nprogress.js');
 require('fastclick/lib/fastclick.js');
 require('./js/custom.js');
 require('./css/custom.css');
-
-require("./js/index.js")
+require('./js/modal.js');
+require("./js/index.js");
