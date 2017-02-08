@@ -9,6 +9,8 @@ module.exports = {
 	},
 	"rules" : {
 		"semi" : 2,
-		"linebreak-style": ["error", "windows"]
+		"linebreak-style": ["error", "windows"],
+		"comma-dangle": ["error","ignore"],
+		"no-unused-vars": 0
 	}
 };
