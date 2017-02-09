@@ -26,6 +26,7 @@
   "dependencies": {
     "angular": "latest",
     "angular-cookies": "^1.6.2",
+    "async": "^2.1.4",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.9.0",
     "bootstrap": "",
@@ -41,6 +42,7 @@
     "jquery": "^2.2.3",
     "jquery-ui-bundle": "^1.11.4",
     "jwt-simple": "^0.5.1",
+    "moment": "^2.17.1",
     "nprogress": "^0.2.0",
     "passport": "^0.3.2",
     "passport-jwt": "^2.2.1",

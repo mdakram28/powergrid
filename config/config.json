@@ -4,16 +4,19 @@
         "password": "admin",
         "database": "powergrid",
         "host": "127.0.0.1",
-        "dialect": "postgres"
+        "dialect": "postgres",
+		"logging": false
     },
     "test": {
         "username": "postgres",
         "password": "admin",
         "database": "powergrid_test",
         "host": "127.0.0.1",
-        "dialect": "mysql"
+        "dialect": "mysql",
+		"logging": false
     },
     "production": {
-        "use_env_variable": "DATABASE_URL"
+        "use_env_variable": "DATABASE_URL",
+		"logging": false
     }
 }

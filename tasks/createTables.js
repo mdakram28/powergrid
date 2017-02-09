@@ -1,8 +1,8 @@
 "use strict";
 
 require('../utils/rootRequire')();
-let Book = rootRequire('app/models/Book');
+let Reading = rootRequire('app/models/reading.js');
 
-Book.sync().then(() => {
-    console.log('Creating table Book');
+Reading.sync().then(() => {
+    console.log('Creating reading Book');
 });
