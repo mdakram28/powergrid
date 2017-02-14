@@ -11,3 +11,4 @@ require('./services/authService.js')(app);
 //then finally the controllers
 require('./controllers/mainController.js')(app);
 require('./controllers/loginController.js')(app);
+require('./controllers/readingController.js')(app);

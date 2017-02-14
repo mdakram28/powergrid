@@ -1,0 +1,35 @@
+<!--  Main MAtter -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
+<div class= "col-sm-12" ng-controller="readingController">
+	<form>
+	  <div class="form-group">
+		  <label> TYPE : </label>
+		  <select ng-init="type='VRY'" ng-model="type" ng-change="sendDate()">
+		  	<option value= "VRY" >Line Voltage</option>
+		  	<option value = "VRN" selected="selected">Phase Voltage</option>
+		  	<option value = "IR">Current</option>
+		  	<option value = "KVAR">Apparent Power S in VA</option>
+		  	<option value = "KVARR">Reactive Power Q in VAR</option>
+		  	<option value = "WR"> Real Power Pr-y-b in W</option>
+		  </select>
+		  </div>
+		  <div class="form-group">
+		    <label>Starting Date :</label>
+		    <input type="Date" placeholder="Starting Date" class="form-control" ng-model="start">
+		  </div>
+
+		  <div class="form-group">
+		    <label>Ending Date :</label>
+		    <input type="Date" placeholder="Ending Date" class="form-control" ng-model="end">
+		  </div>
+
+		  <button type="button" class="btn btn-primary" ng-click="sendDate()" >Submit </button>
+
+	</form><br>
+
+	<div id ="chart-container">
+		<canvas id= "mycanvas">
+			
+		</canvas>
+	</div>
+</div>
