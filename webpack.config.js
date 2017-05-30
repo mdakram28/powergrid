@@ -14,6 +14,9 @@ module.exports = {
         path: path.join(__dirname, './public/build'),
         filename: 'bundle.js',
     },
+    externals : {
+        // 'plotly' : 'Plotly'
+    },
     module: {
         loaders: [
             {

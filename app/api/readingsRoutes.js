@@ -64,3 +64,31 @@ module.exports = function(auth) {
     });
     return router;
 };
+
+router.get('/getPerDayPower',function (req,res,next) {
+
+	/*var data = req.body.data;
+    	console.log(req.body);
+    	var start = new Date(data.from);
+    	var end = new Date(data.to);
+    	console.log(start+end);
+    	var table = data.table;*/
+    	var start = new Date(req.query.start);
+    	var end = new Date(req.query.end);
+    	
+	
+	var d = Reading.findAll({
+		  attributes: ["datetime","kw"],
+		  where: {
+		    datetime:{
+		    	gte: start,
+		    	lte : end
+		    }
+		  }
+		}).then(function(ret){
+			ret.sort(function(a,b){
+				return a.datetime - b.datetime;
+			})
+			return res.json(ret);	
+		});
+});
